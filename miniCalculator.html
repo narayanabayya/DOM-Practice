@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniCalculator</title>
+</head>
+
+<body>
+    <input type="number" name="" id="firstInput" placeholder="Enter first Number">
+    <input type="number" id="secondInput" placeholder="Enter second number"> <br>
+
+    <button onclick="Add()">Add</button>
+    <button onclick="Subtract()">Subtract</button>
+    <button onclick="Multiply()">Multiply</button>
+    <button onclick="Divide()">Divide</button>
+</body>
+
+</html>
+
+<script>
+
+    let Add = () => {
+        let firstInput = parseFloat(document.getElementById('firstInput').value);
+        let secondInput = parseFloat(document.getElementById('secondInput').value);
+        let result = firstInput + secondInput;
+        alert(result);
+    }
+    let Subtract = ()=>{
+        let firstInput = parseFloat(document.getElementById('firstInput').value);
+        let secondInput = parseFloat(document.getElementById('secondInput').value);
+        let result = firstInput - secondInput;
+        alert(result);
+    }
+
+    let Multiply = ()=>{
+        let firstInput = parseFloat(document.getElementById('firstInput').value);
+        let secondInput = parseFloat(document.getElementById('secondInput').value);
+        let result = firstInput * secondInput;
+        alert(result);
+    }
+
+    let Divide = ()=>{
+        let firstInput = parseFloat(document.getElementById('firstInput').value);
+        let secondInput = parseFloat(document.getElementById('secondInput').value);
+        if(secondInput!==0){
+        let result = firstInput / secondInput;
+        alert(result);
+        } else {
+            alert("can't divide with 0")
+        }
+    }
+</script>
