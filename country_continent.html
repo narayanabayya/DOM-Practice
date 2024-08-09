@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select name="" id="continent_select">
+        <option value="India">India</option>
+        <option value="United States of America">United States of America</option>
+        <option value="China
+        ">China
+        </option>
+        <option value="Nepal
+        ">Nepal
+        </option>
+        <option value="Australia">Australia</option>
+        <option value="France">France</option>
+        <option value="Germany">Germany</option>
+        <option value="South Africa">South Africa</option>
+        <option value="Nigeria">Nigeria</option>
+        <option value="Mexico
+        ">Mexico
+        </option>
+        <option value="Argentina">Argentina</option>
+        <option value="Brazil">Brazil</option>
+        <option value="Canada">Canada</option>
+        <option value="Singapore">Singapore</option>
+        <option value="Sweden
+        ">Sweden
+        </option>
+    </select>
+
+    <button onclick="findContinent()">Find continent</button>
+</body>
+<script>
+
+const objects = {
+            "India":"Asia",
+           " United States of America ": "North America",
+            "China": "Asia",
+            "Nepal": "Asia",
+            "Australia ": "Australia",
+            "France" : "Europe",
+            "Germany" : "Europe",
+            "SouthAfrica" :"Africa",
+            "Nigeria" : "Africa",
+            "Mexico ": "South America", 
+            "Argentina" : "South America",
+            "Brazil" : "South America",
+            "Canada" : "North America",
+            "Singapore" :" Asia",
+            "Sweden ":" Europe"
+        }
+
+    const findContinent= (e)=>{
+        let continent = document.getElementById('continent_select').value;
+
+        
+        console.log(objects["China"])
+        let output = objects[continent];
+        alert(`The continent is ${output}`)
+    }
+</script>
+</html>
